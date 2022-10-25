@@ -9,10 +9,10 @@ public class Posicao {
 		this.coluna = coluna;
 	}
 
-	public int getFileira() {
+	public int getLinha() {
 		return linha;
 	}
-	public void setFileira(int linha) {
+	public void setLinha(int linha) {
 		this.linha = linha;
 	}
 
