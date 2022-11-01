@@ -1,10 +1,10 @@
 package Xadrez.pecas;
 
 import Xadrez.Cor;
-import Xadrez.PecaDeXadrez;
+import Xadrez.XadrezPeca;
 import tabuleiroJogo.Tabuleiro;
 
-public class Torre extends PecaDeXadrez {
+public class Torre extends XadrezPeca {
 	
 	public Torre(Tabuleiro tabuleiro , Cor cor) {
 		super(tabuleiro, cor);
