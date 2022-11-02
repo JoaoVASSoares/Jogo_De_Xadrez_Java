@@ -37,6 +37,7 @@ public class UI {
 	 System.out.print("\033[H\033[2J");
 	 System.out.flush();
 	} 
+	
 	public static XadrezPosicao lerPosicaoXadrez(Scanner sc) {
 		try {
 		String s = sc.nextLine();
@@ -54,16 +55,30 @@ public class UI {
 		for (int i = 0; i < pecas.length; i++) {
 			System.out.print((8 - i) + " ");
 			for (int j = 0; j < pecas.length; j++) {
-				printPeca(pecas[i][j]);
+				printPeca(pecas[i][j],false);
+			}
+			System.out.println();
+		}
+		System.out.println("  a b c d e f g h");
+	}
+	
+	public static void printTabuleiro(XadrezPeca[][] pecas, boolean[][] movimentosPossiveis) {
+		for (int i = 0; i < pecas.length; i++) {
+			System.out.print((8 - i) + " ");
+			for (int j = 0; j < pecas.length; j++) {
+				printPeca(pecas[i][j], movimentosPossiveis[i][j]);
 			}
 			System.out.println();
 		}
 		System.out.println("  a b c d e f g h");
 	}
 
-	private static void printPeca(XadrezPeca peca) {
+	private static void printPeca(XadrezPeca peca,boolean background) {
+		if(background) {
+			System.out.print(ANSI_BLUE_BACKGROUND);
+		}
 		if (peca == null) {
-			System.out.print("-");
+			System.out.print("-" + ANSI_RESET);
 		} else {
 			if (peca.getCor() == Cor.BRANCO) {
 				 System.out.print(ANSI_WHITE + peca + ANSI_RESET);
