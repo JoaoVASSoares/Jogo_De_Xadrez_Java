@@ -8,11 +8,23 @@ import tabuleiroJogo.Tabuleiro;
 
 public class XadrezPartida  {
 
+	private int turno;
+	private Cor jogadorAtual;
 	private Tabuleiro tabuleiro;
 	
 	public XadrezPartida() {
 		tabuleiro = new Tabuleiro(8, 8);
+		turno = 1;
+		jogadorAtual = Cor.BRANCO;
 		setupInicial();
+	}
+	
+	public int getTurno(){
+		return turno;
+	}
+	
+	public Cor getJogadorAtual() {
+		return jogadorAtual;
 	}
 	
 	public XadrezPeca[][] getPecas(){
@@ -37,6 +49,7 @@ public class XadrezPartida  {
 		validacaoPosicaoOrigem(origem);
 		validacaoPosicaoDestino(origem,destino);
 		Peca capturaDePeca = fazerMovimento(origem, destino);
+		proximoTurno();
 		return (XadrezPeca)capturaDePeca;
 	}
 	
@@ -51,6 +64,9 @@ public class XadrezPartida  {
 		if(!tabuleiro.temUmaPeca(posicao)) {
 			throw new XadrezExcecao("Não existe peça na posição de origem escolhida!");
 		}
+		if(jogadorAtual != ((XadrezPeca)tabuleiro.peca(posicao)).getCor()) {
+			throw new XadrezExcecao("A peça na posição de origem escolhida não é sua!");
+		}
 		if(!tabuleiro.peca(posicao).existeAlgumMovimentoPossivel()) {
 			throw new XadrezExcecao("Não há movimentos possiveis para a peça de origem escolhida!");
 		}
@@ -60,6 +76,12 @@ public class XadrezPartida  {
 		if(!tabuleiro.peca(origem).movimentosPossiveis(destino)) {
 			throw new XadrezExcecao("Posição de destino invalida!");
 		}
+	}
+	
+	private void proximoTurno() {
+		turno++;
+		//(se o jogador atual for igual a branco entao agora ele vai ser igual a preto caso contrario sera igual a branco 
+		jogadorAtual = (jogadorAtual == Cor.BRANCO) ? Cor.PRETO : Cor.BRANCO;
 	}
 	
 	private void colocarNovaPeca(char coluna, int linha, XadrezPeca peca) {
