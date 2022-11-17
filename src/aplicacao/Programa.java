@@ -40,8 +40,12 @@ public class Programa {
 				}
 				
 				if(xadrezPartida.getPromoted() != null) {
-					System.out.println("Digite a peca para promoção (B/C/T/Q): ");
-					String type = sc.nextLine();
+					System.out.print("Digite a peca para promoção (B/C/T/Q): ");
+					String type = sc.nextLine().toUpperCase();
+					while(!type.equals("B") && !type.equals("C") && !type.equals("T") && !type.equals("Q")) {
+						System.out.print("Valor invalido! Digite a peca para promoção (B/C/T/Q): ");
+						type = sc.nextLine().toUpperCase();
+					}
 					xadrezPartida.substituirPecaPromovida(type);
 				}
 				
