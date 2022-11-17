@@ -21,10 +21,10 @@ public abstract class XadrezPeca extends Peca {
 	public int getContadorMovimento() {
 		return contadorMovimento;
 	}
-	public void acrentarContadorMovimento() {
+	protected void acrentarContadorMovimento() {
 		contadorMovimento++;
 	}
-	public void diminuirContadorMovimento() {
+	protected void diminuirContadorMovimento() {
 		contadorMovimento--;
 	}
 	public XadrezPosicao getXadrezPosicao() {
