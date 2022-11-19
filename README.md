@@ -4,8 +4,26 @@
 </p>
 
 # Índice
+- [**Sobre o projeto**](https://github.com/JoaoVASSoares/Jogo_De_Xadrez_Java/blob/main/README.md#sobre-o-projeto)
+- [**Sobre o tabuleiro**](https://github.com/JoaoVASSoares/Jogo_De_Xadrez_Java/edit/main/README.md#sobre-o-tabuleiro)  
+  - [**Impressão do tabuleiro no console**](https://github.com/JoaoVASSoares/Jogo_De_Xadrez_Java/edit/main/README.md#impress%C3%A3o-do-tabuleiro-no-console)
+  - [**A exceção tabuleiroException**](https://github.com/JoaoVASSoares/Jogo_De_Xadrez_Java/edit/main/README.md#a-exce%C3%A7%C3%A3o-tabuleiroexcecao)
+- [**Sobre as peças**](https://github.com/JoaoVASSoares/Jogo_De_Xadrez_Java/edit/main/README.md#sobre-as-pe%C3%A7as)
+  - [**Peças presentes no tabuleiro**](https://github.com/JoaoVASSoares/Jogo_De_Xadrez_Java/edit/main/README.md#pe%C3%A7as-presentes-no-tabuleiro)
+  - [**Método para colocar as peças no tabuleiro**](https://github.com/JoaoVASSoares/Jogo_De_Xadrez_Java/edit/main/README.md#m%C3%A9todo-para-colocar-as-pe%C3%A7as-no-tabuleiro)
+- [**Como foi criada a restrição de movimento para cada peça**](https://github.com/JoaoVASSoares/Jogo_De_Xadrez_Java/edit/main/README.md#como-foi-criada-a-restri%C3%A7%C3%A3o-de-movimento-para-cada-pe%C3%A7a)
+  - [**Validar posição de origem**](https://github.com/JoaoVASSoares/Jogo_De_Xadrez_Java/edit/main/README.md#validar-posi%C3%A7%C3%A3o-de-origem)
+    - [**Posição nula**](https://github.com/JoaoVASSoares/Jogo_De_Xadrez_Java/edit/main/README.md#1-posi%C3%A7%C3%A3o-nula)
+    - [**Se a peça é do jogador**](https://github.com/JoaoVASSoares/Jogo_De_Xadrez_Java/edit/main/README.md#2-se-a-pe%C3%A7a-escolhida-%C3%A9-do-jogador)
+    - [**Se não existe movimentos possíveis**](https://github.com/JoaoVASSoares/Jogo_De_Xadrez_Java/edit/main/README.md#3-se-n%C3%A3o-existem-movimentos-poss%C3%ADveis) 	
+   - [**Validar posição de destino**](https://github.com/JoaoVASSoares/Jogo_De_Xadrez_Java/edit/main/README.md#validando-posi%C3%A7%C3%A3o-de-destino)
+- [**Jogadas especiais**](https://github.com/JoaoVASSoares/Jogo_De_Xadrez_Java/edit/main/README.md#jogadas-especiais)
+   - [**Roque pequeno**](https://github.com/JoaoVASSoares/Jogo_De_Xadrez_Java/edit/main/README.md#1-roque-pequeno)
+   - [**Roque grande**](https://github.com/JoaoVASSoares/Jogo_De_Xadrez_Java/edit/main/README.md#2-roque-grande)
+   - [**En Passant**](https://github.com/JoaoVASSoares/Jogo_De_Xadrez_Java/edit/main/README.md#3-en-passant)
+   - [**Promoção**](https://github.com/JoaoVASSoares/Jogo_De_Xadrez_Java/edit/main/README.md#4-promo%C3%A7%C3%A3o)
+- [**Contato**](https://github.com/JoaoVASSoares/Jogo_De_Xadrez_Java/edit/main/README.md#contato-joaovitoralmeidashotmailcom)
   
-
 # Sobre o projeto
 Este foi um projeto desenvolvido durante o curso de Java do @acenelio. A proposta principal dele é aplicar nossos conhecimentos na linguagem Java para criar um jogo de Xadrez que rodasse via console. Ele pode parecer um projeto simples, porém ele é muito mais complicado do que você imagina.
 
